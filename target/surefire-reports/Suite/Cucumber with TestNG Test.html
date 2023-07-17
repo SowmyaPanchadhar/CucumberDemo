@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>TestNG:  Cucumber with TestNG Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Cucumber with TestNG Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat May 27 16:28:49 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>78 seconds (78184 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid username and password", "Login functionality for opensource HRMS application"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=113.0.5672.94) 
+Host info: host: &apos;DESKTOP-M9AORU3&apos;, ip: &apos;192.168.0.191&apos;
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:52)
+	at stepdef.LoginHrmsStepDef.setup(LoginHrmsStepDef.java:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace917316251", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace917316251'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=113.0.5672.94) 
+Host info: host: &apos;DESKTOP-M9AORU3&apos;, ip: &apos;192.168.0.191&apos;
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:165)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:229)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:52)
+	at stepdef.LoginHrmsStepDef.setup(LoginHrmsStepDef.java:31)
+</pre></div></td>
+<td>3</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "unsuccesful login with invalid credentials", "Login functionality for opensource HRMS application"</td>
+<td></td>
+<td>9</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "unsuccesful login with invalid credentials", "Login functionality for opensource HRMS application"</td>
+<td></td>
+<td>9</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to forgot password page when clicked on Forgot password link", "Login functionality for opensource HRMS application"</td>
+<td></td>
+<td>9</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "unsuccesful login with invalid credentials", "Login functionality for opensource HRMS application"</td>
+<td></td>
+<td>9</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid username and password", "Login functionality for opensource HRMS application"</td>
+<td></td>
+<td>12</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search a product", "Amazon search"</td>
+<td></td>
+<td>7</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+<tr>
+<td title='runners.LoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.LoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "unsuccesful login with invalid credentials", "Login functionality for opensource HRMS application"</td>
+<td></td>
+<td>9</td>
+<td>runners.LoginTestRunner@5e600dd5</td></tr>
+</table><p>
+</body>
+</html>
